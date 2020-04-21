@@ -30,6 +30,7 @@ nl:
     hi: 'हिंदी'
     zh-CN: 中文
   navigation:
+    skip_to_main_content: 'Ga naar hoofdinhoud'
     main_menu: Hoofdsitemenu
     user_menu: Gebruikersmenu
     about: Over

@@ -30,6 +30,7 @@ nb:
     hi: 'हिंदी'
     zh-CN: 中文
   navigation:
+    skip_to_main_content: 'Hopp til hovedinnhold'
     main_menu: Hovedstedmeny
     user_menu: Brukermeny
     about: Om

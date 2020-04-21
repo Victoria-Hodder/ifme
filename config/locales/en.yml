@@ -30,6 +30,7 @@ en:
     hi: 'हिंदी'
     zh-CN: 中文
   navigation:
+    skip_to_main_content: 'Skip to main content'
     main_menu: 'Main menu'
     user_menu: 'User menu'
     about: About
