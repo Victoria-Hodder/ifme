@@ -34,8 +34,7 @@ class StrategiesController < ApplicationController
   def quick_create
     # Assume all viewers and comments allowed
     viewers = current_user.allies_by_status(:accepted).pluck(:id)
-    strategy = Strategy.new(quick_create_params(viewers))
-    shared_quick_create(strategy)
+    shared_quick_create(Strategy.new(quick_create_params(viewers)))
   end
 
   # GET /strategies/new
@@ -101,6 +100,7 @@ class StrategiesController < ApplicationController
   # DELETE /strategies/1.json
   def destroy
     shared_destroy(@strategy)
+    PerformStrategyReminder.where(strategy_id: @strategy.id).destroy_all
   end
 
   def tagged
@@ -121,15 +121,8 @@ class StrategiesController < ApplicationController
     redirect_to_path(strategies_path)
   end
 
-  def strategy_params
-    params.require(:strategy).permit(
-      :name, :description, :published_at, :draft, :comment, { category: [] },
-      { viewers: [] }, perform_strategy_reminder_attributes: %i[active id]
-    )
-  end
-
   def quick_create_params(viewers)
-    { user_id: current_user.id, comment: true, viewers: viewers,
+    { user_id: current_user.id, comment: true, viewers: viewers, visible: true,
       description: params[:strategy][:description], published_at: Time.zone.now,
       category: params[:strategy][:category], name: params[:strategy][:name] }
   end
