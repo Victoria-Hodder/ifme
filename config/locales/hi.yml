@@ -30,6 +30,7 @@ hi:
     hi: 'हिंदी'
     zh-CN: 中文
   navigation:
+    skip_to_main_content: 'मुख्य सामग्री पर जाएं'
     main_menu: 'मुख्य साइट मेनू'
     user_menu: 'उपयोगकर्ता विकल्प सूची'
     about: 'बारे में'

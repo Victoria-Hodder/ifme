@@ -30,6 +30,7 @@ vi:
     hi: 'हिंदी'
     zh-CN: 中文
   navigation:
+    skip_to_main_content: 'Chuyển đến nội dung chính'
     main_menu: 'Menu trang chính'
     user_menu: 'Menu người dùng'
     about: Về
