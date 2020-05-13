@@ -12,7 +12,7 @@ function SkipToContent(props: Props) {
   const { id } = props;
   const [scroll, setScroll] = useState(false);
   const aToScroll = document.getElementById(id).useCallback(() => {
-    setIsFocused(true);
+    setScroll(true);
   }, []);
 
   return (
