@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_09_110917) do
+ActiveRecord::Schema.define(version: 2020_05_27_035711) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,14 @@ ActiveRecord::Schema.define(version: 2020_05_09_110917) do
   create_table "bootsy_images", force: :cascade do |t|
     t.string "image_file"
     t.integer "image_gallery_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "care_plan_contacts", force: :cascade do |t|
+    t.string "name"
+    t.string "phone"
+    t.integer "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -191,6 +199,7 @@ ActiveRecord::Schema.define(version: 2020_05_09_110917) do
     t.integer "user_id", null: false
     t.string "encrypted_password"
     t.datetime "created_at", null: false
+    t.index ["encrypted_password", "user_id"], name: "index_password_histories_on_encrypted_password_and_user_id", unique: true
   end
 
   create_table "perform_strategy_reminders", id: :serial, force: :cascade do |t|
@@ -306,6 +315,7 @@ ActiveRecord::Schema.define(version: 2020_05_09_110917) do
   add_foreign_key "moments_moods", "moods"
   add_foreign_key "moments_strategies", "moments"
   add_foreign_key "moments_strategies", "strategies"
+  add_foreign_key "password_histories", "users"
   add_foreign_key "strategies_categories", "categories"
   add_foreign_key "strategies_categories", "strategies"
 end
