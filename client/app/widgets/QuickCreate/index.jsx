@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { Modal } from '../../components/Modal';
+import Modal from '../../components/Modal';
 import Input from '../../components/Input';
 import type { Checkbox } from '../../components/Input/utils';
 import { Utils } from '../../utils';
@@ -84,7 +84,7 @@ export class QuickCreate extends React.Component<Props, State> {
     return sortAlpha(newCheckboxes);
   };
 
-  onCreate = (response: any) => {
+  onSubmit = (response: any) => {
     const { data } = response;
     if (data && data.success) {
       this.setState({
@@ -103,7 +103,7 @@ export class QuickCreate extends React.Component<Props, State> {
       <DynamicForm
         nameValue={nameValue}
         formProps={formProps}
-        onCreate={this.onCreate}
+        onSubmit={this.onSubmit}
       />
     );
   };
@@ -149,7 +149,7 @@ export class QuickCreate extends React.Component<Props, State> {
       <div>
         {this.displayInputTag()}
         <div className={css.modal}>
-          <Modal body={body} title={label} open={open} key={modalKey} />
+          <Modal body={body} title={label} open={open} modalKey={modalKey} />
         </div>
       </div>
     );

@@ -1,9 +1,14 @@
 # frozen_string_literal: true
 
+CRISIS_PREVENTION_TAGS = %w[
+  die dead died dying death passed_away kill_myself hurt_myself suicidal suicide
+].freeze
+
 class ResourceRecommendations
-  def initialize(moment)
+  def initialize(moment:, current_user:)
     @moment = moment
     @moment_keywords = []
+    @current_user = current_user
   end
 
   def call
@@ -25,7 +30,23 @@ class ResourceRecommendations
     resource_tags
   end
 
+  def show_crisis_prevention
+    if @moment.user_id == @current_user.id &&
+       (@moment.created_at.to_date == Date.current ||
+       @moment.updated_at.to_date == Date.current)
+      @moment_keywords = MomentKeywords.new(@moment).call
+      CRISIS_PREVENTION_TAGS.each do |tag|
+        return true if @moment_keywords.match?(get_crisis_preventation_tag(tag))
+      end
+    end
+    false
+  end
+
   private
+
+  def get_crisis_preventation_tag(tag)
+    I18n.t("pages.resources.crisis_prevention.#{tag}")
+  end
 
   def all_resources
     resources = JSON.parse(File.read('doc/pages/resources.json'))

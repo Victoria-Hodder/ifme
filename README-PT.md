@@ -4,11 +4,11 @@
 [![Backers on Open Collective](https://opencollective.com/ifme/backers/badge.svg)](#backers)
 [![Sponsors on Open Collective](https://opencollective.com/ifme/sponsors/badge.svg)](#sponsors)
 
-README en: [Inglês](https://github.com/ifmeorg/ifme/blob/master/README.md), [Espanhol](https://github.com/ifmeorg/ifme/blob/master/README-ES.md), [Francês](https://github.com/ifmeorg/ifme/blob/master/README-FR.md)
+README en: [Inglês](https://github.com/ifmeorg/ifme/blob/master/README.md), [Espanhol](https://github.com/ifmeorg/ifme/blob/master/README-ES.md), [Francês](https://github.com/ifmeorg/ifme/blob/master/README-FR.md), [Coreano](https://github.com/ifmeorg/ifme/blob/master/README-KO.md)
 
-# if me
+# if-me.org
 
-[if me](https://www.if-me.org/) é uma comunidade para experiências de saúde mental, que encoraja as pessoas a compartilhar suas histórias pessoais com aliados confiáveis. Aliados confiáveis são as pessoas com as quais interagimos diariamente, incluindo amigos, familiares, colegas de trabalho, professores e profissionais de saúde mental.
+[if-me.org](https://www.if-me.org/) é uma comunidade para experiências de saúde mental, que encoraja as pessoas a compartilhar suas histórias pessoais com aliados confiáveis. Aliados confiáveis são as pessoas com as quais interagimos diariamente, incluindo amigos, familiares, colegas de trabalho, professores e profissionais de saúde mental.
 
 Lidar com a saúde mental é o que nos torna humanos. Mas para muitos de nós, é complicado falar abertamente sobre isso. Nem todo mundo é conselheiro ou terapeuta. As pessoas com as quais interagimos todos os dias moldam nossas emoções e comportamento. Envolvê-los no tratamento da saúde mental é a chave para a recuperação.
 
