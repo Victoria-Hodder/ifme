@@ -18,7 +18,16 @@ import { Logo } from '../components/Logo';
 import Modal from '../components/Modal';
 import { Notifications } from '../widgets/Notifications';
 import { Resource } from '../components/Resource';
+<<<<<<< HEAD
 import Resources from '../widgets/Resources';
+=======
+<<<<<<< HEAD
+import { Resources } from '../widgets/Resources';
+import SkipToContent from '../components/SkipToContent';
+=======
+import Resources from '../widgets/Resources';
+>>>>>>> fa03f43c093d43791ea814aa68a6332157b5df89
+>>>>>>> 69fb6c984ec8f4bb19e05351114b4d380ff34edc
 import { Story } from '../components/Story';
 import { StoryDraft } from '../components/Story/StoryDraft';
 import { StoryActions } from '../components/Story/StoryActions';

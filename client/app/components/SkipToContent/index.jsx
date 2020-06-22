@@ -1,4 +1,6 @@
+// @flow
 import React, {useState, useCallback} from 'react';
+
 import css from './SkipToContent.scss';
 import { I18n } from '../../libs/i18n';
 
@@ -9,10 +11,11 @@ export type Props = {
 function SkipToContent(props: Props) {
   const { id } = props;
   const [scroll, setScroll] = useState(false);
-  const aToScroll = document.getElementById(id).useCallback(() => { 
+  const aToScroll = document.getElementById(id).useCallback(() => {
     setScroll(true);
-    }, []);  
-    return (
+  }, []);
+
+  return (
     <a 
       className={css.skipToContent} 
       onClick={aToScroll} 
@@ -21,4 +24,6 @@ function SkipToContent(props: Props) {
       {I18n.t('navigation.skip_to_main_content')}
     </a>
   );
-}export default SkipToContent;
+}
+
+export default SkipToContent;
