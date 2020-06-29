@@ -49,8 +49,7 @@
     "react-html-parser": "^2.0.2",
     "react-lazyload": "^2.6.2",
     "react-on-rails": "11.3.0",
-    "react-render-html": "^0.6.0",
-    "react-router-dom": "^5.1.2"
+    "react-render-html": "^0.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -61,6 +60,7 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.2.0",
     "@storybook/addon-backgrounds": "^5.3.19",
     "@storybook/addon-docs": "^5.3.19",
     "@storybook/addon-info": "^5.3.19",
